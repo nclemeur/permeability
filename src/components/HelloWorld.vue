@@ -25,6 +25,11 @@ const toUnitDisplay = computed(()=>{
   return dstUnitStr;
 
 });
+const toSIDisplay = computed(()=>{
+ const from = unit(fromValue.value, toUnitDisplay.value);
+ return from.toSI();
+});
+
 const toValue = computed( () => {
   const from = unit(fromValue.value, fromUnitDisplay.value);
   return from.toNumber(toUnitDisplay.value);
@@ -52,6 +57,7 @@ const toValue = computed( () => {
   Current selection: {{fromUnitDisplay}}
   <br />
   Value: <input style="margin-top: 1em;" v-model.number="fromValue" type="text" />
+  <b style="padding-left: 25px;">SI value:</b> {{ toSIDisplay}} 
   </div>
   <h1>TO</h1>
   <div>
