@@ -7,7 +7,7 @@ const b = a.toNumber('cc  mm / (m2  day atm)')
 const c = a.toNumber('cc  cm / (cm2  s Pa)')
 
 const volumeUnits = ['m3', 'cc'];
-const lengthUnits = ['mm', 'mil'];
+const lengthUnits = ['m', 'cm','mm', 'mil'];
 const areaUnits = ['m2','cm2', 'mm2'];
 const timeUnits = ['day', 'second'];
 const pressureUnits = ['atm', 'bar', 'kPa', 'Pa', 'mmHg'];
